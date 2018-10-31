@@ -7,13 +7,13 @@ PROFILE=jhu-langmead
 SITE=bowtie.bio
 
 # 1. Make the bucket
-#aws --profile ${PROFILE} s3 mb s3://${SITE}
+aws --profile ${PROFILE} s3 mb s3://${SITE}
 
 # 2. Make it a static website bucket
-#aws --profile ${PROFILE} s3 website \
-#    s3://${SITE}/ \
-#        --index-document index.html \
-#        --error-document error.html
+aws --profile ${PROFILE} s3 website \
+    s3://${SITE}/ \
+        --index-document index.html \
+        --error-document error.html
 
 # 3. Set bucket policy
 cat >policy.json <<EOF

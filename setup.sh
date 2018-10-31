@@ -4,7 +4,7 @@
 # https://medium.freecodecamp.org/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38
 
 PROFILE=jhu-langmead
-SITE=bowtie.bio
+SITE=www.bowtie.bio
 
 # 1. Make the bucket
 aws --profile ${PROFILE} s3 mb s3://${SITE}
